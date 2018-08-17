@@ -9,12 +9,12 @@ make install
 ldconfig
 
 cd $HOME
-git clone https://github.com/snortadmin/snort3.git
+git clone https://github.com/snort3/snort3.git
 cd snort3
 ./configure\_cmake.sh --prefix=$HOME/install/snort3 --enable-unit-tests
 cd build
 make -j$(nproc) install
-make check
+make -j$(nproc) check
 
 $HOME/install/snort3/bin/snort -V
 $HOME/install/snort3/bin/snort --catch-test all
