@@ -7,20 +7,21 @@ apt-get update && \
 apt-get dist-upgrade -y && \
 # Install the Snort build dependencies
 apt-get install -y \
-    bison \
+    autoconf \
     build-essential \
     cmake \
-    flex \
     libdumbnet-dev \
     libhwloc-dev \
     libhyperscan-dev \
     libluajit-5.1-dev \
     liblzma-dev \
+    libmnl-dev \
     libpcap-dev \
     libpcre3-dev \
     libssl-dev \
     pkg-config \
     uuid-dev \
+    zlib1g-dev \
 # Install the Snort developer requirements
     cppcheck \
     curl \

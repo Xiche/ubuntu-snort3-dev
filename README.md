@@ -1,9 +1,9 @@
 Snort++ build quick start (inside the container) with unit test support:
 ```
 cd $HOME
-curl -LO https://snort.org/downloads/snortplus/daq-2.2.2.tar.gz
-tar xf daq-2.2.2.tar.gz
-cd daq-2.2.2
+git clone https://github.com/snort3/libdaq.git
+cd libdaq
+./bootstrap
 ./configure
 make install
 ldconfig
