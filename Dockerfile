@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:19.04
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
 # Update the image's pre-installed packages
