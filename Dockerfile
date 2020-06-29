@@ -19,15 +19,14 @@ apt-get install -y \
     libpcap-dev \
     libpcre3-dev \
     libssl-dev \
+    libunwind-dev \
     pkg-config \
     uuid-dev \
     zlib1g-dev \
 # Install the Snort developer requirements
-    cppcheck \
     curl \
     gdb \
     git \
-    lcov \
     libcpputest-dev \
     vim \
 # Install programs necessary for documentation generation
