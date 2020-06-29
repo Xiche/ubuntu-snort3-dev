@@ -1,6 +1,9 @@
 FROM ubuntu:rolling
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
+# Workaround for headless installation hang during Docker build
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Update the image's pre-installed packages
 RUN \
 apt-get update && \
