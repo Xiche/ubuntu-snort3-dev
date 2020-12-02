@@ -1,4 +1,4 @@
-FROM ubuntu:rolling
+FROM ubuntu:20.10
 MAINTAINER Michael Altizer <mialtize@cisco.com>
 
 # Workaround for headless installation hang during Docker build
