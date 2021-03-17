@@ -6,6 +6,7 @@ cd libdaq
 ./bootstrap
 ./configure
 make install
+cd /usr/local/lib/daq/
 ldconfig
 
 cd $HOME

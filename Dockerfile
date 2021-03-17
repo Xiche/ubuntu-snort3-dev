@@ -1,5 +1,5 @@
 FROM ubuntu:rolling
-MAINTAINER Michael Altizer <mialtize@cisco.com>
+LABEL maintainer="Michael Altizer <mialtize@cisco.com>"
 
 # Workaround for headless installation hang during Docker build
 ARG DEBIAN_FRONTEND=noninteractive
@@ -9,11 +9,13 @@ RUN \
 apt-get update && \
 apt-get dist-upgrade -y && \
 # Install the Snort build dependencies
-apt-get install -y \
+apt-get install -y --no-install-recommends \
     build-essential \
+    ca-certificates \
     cmake \
     libdumbnet-dev \
     libhwloc-dev \
+    libgoogle-perftools-dev \
     libhyperscan-dev \
     libluajit-5.1-dev \
     liblzma-dev \
@@ -21,6 +23,7 @@ apt-get install -y \
     libpcap-dev \
     libpcre3-dev \
     libssl-dev \
+    libtool \
     libunwind-dev \
     pkg-config \
     uuid-dev \
@@ -35,4 +38,5 @@ apt-get install -y \
 #     asciidoc dblatex w3m \
 && \
 # Clean out the APT cache
-apt-get clean
+apt-get clean \
+&& rm -rf /var/lib/apt/lists/*
