@@ -13,8 +13,10 @@ apt-get install -y --no-install-recommends \
     build-essential \
     ca-certificates \
     cmake \
+    flex \
     libdumbnet-dev \
     libhwloc-dev \
+    libflatbuffers-dev \
     libgoogle-perftools-dev \
     libhyperscan-dev \
     libluajit-5.1-dev \
